@@ -24,4 +24,4 @@ def run():
 
 
 if __name__ == '__main__':
-    populate_initial_data('API')
+    manager.run()
