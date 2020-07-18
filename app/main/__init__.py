@@ -18,8 +18,9 @@ def register_blueprints(flask_app):
 
 
 def register_plugins(flask_app):
-    from .plugins import db
+    from .plugins import db, ma
     db.init_app(flask_app)
+    ma.init_app(flask_app)
 
 
 def cors_app(flask_app):
@@ -27,12 +28,22 @@ def cors_app(flask_app):
     CORS(flask_app)
 
 
+def populate_initial_data(source):
+    from app.main.functions import PopulateDatabaseFunctions, CurrencyConverterApiFunctions
+    PopulateDatabaseFunctions.populate(
+        CurrencyConverterApiFunctions.get_exchange_rate_by_date_range(
+            Config.INITIAL_BASE,
+            Config.INITIAL_QUOTE,
+            Config.INITIAL_START_DATE,
+            Config.INITIAL_END_DATE,
+        ), source)
+
+
 def configure_app(config_class):
     flask_app = create_app(config_class)
-    register_blueprints(flask_app)
     register_plugins(flask_app)
+    register_blueprints(flask_app)
     cors_app(flask_app)
-
     return flask_app
 
 
