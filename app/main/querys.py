@@ -1,0 +1,4 @@
+
+
+class ExchangeRateQuerys:
+    pass

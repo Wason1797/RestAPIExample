@@ -1,5 +1,5 @@
-from flask import Blueprint, jsonify
 from app.http_methods import GET
+from flask import Blueprint, jsonify
 
 
 index = Blueprint('index', __name__)

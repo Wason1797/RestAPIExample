@@ -3,8 +3,6 @@ from app.main.plugins import db
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 
-import pytest
-
 
 flask_app.app_context().push()
 
@@ -18,11 +16,6 @@ manager.add_command('db', MigrateCommand)
 @manager.command
 def run():
     flask_app.run()
-
-
-@manager.command
-def test():
-    return pytest.main(['-vv', './app/test'])
 
 
 if __name__ == '__main__':
