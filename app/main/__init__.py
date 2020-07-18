@@ -28,15 +28,17 @@ def cors_app(flask_app):
     CORS(flask_app)
 
 
-def populate_initial_data(source):
+def populate_initial_data(source='API'):
+    import json
     from app.main.functions import PopulateDatabaseFunctions, CurrencyConverterApiFunctions
-    PopulateDatabaseFunctions.populate(
-        CurrencyConverterApiFunctions.get_exchange_rate_by_date_range(
-            Config.INITIAL_BASE,
-            Config.INITIAL_QUOTE,
-            Config.INITIAL_START_DATE,
-            Config.INITIAL_END_DATE,
-        ), source)
+    data = CurrencyConverterApiFunctions.get_exchange_rate_by_date_range(
+        Config.INITIAL_BASE,
+        Config.INITIAL_QUOTE,
+        Config.INITIAL_START_DATE,
+        Config.INITIAL_END_DATE,
+    )if source == 'API' else json.load(open(Config.MOCK_DATA_JSON, 'r'))
+
+    PopulateDatabaseFunctions.populate(data, source)
 
 
 def configure_app(config_class):

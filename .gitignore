@@ -126,3 +126,4 @@ dmypy.json
 
 # Migrations
 /migrations
+db.sqlite-journal
