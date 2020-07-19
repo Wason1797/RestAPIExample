@@ -2,7 +2,7 @@
 
 Wellcome to a simple API that makes querys to a local sqlite database to know exchange rates.
 
-## Install the necesary dependencies
+## Install the necessary dependencies
 
 Create a virtual enviroment if necesary or just run the following command:
 
@@ -53,7 +53,7 @@ python manage.py populate --data_source API --base EUR --quote USD --start_date 
 
 ## Running the API
 
-Once you have populate the database you can run the api with the following command
+Once you have populate the database you can run the API with the following command
 
 ```bash
 python manage.py run
@@ -98,9 +98,9 @@ http://127.0.0.1:5000/currency-exchange/range/?base=EUR&quote=USD&date=2020-06-1
 ]
 ```
 
-(If end_date is not provided then you will get the exchange for one particular date )
+(If end_date is not provided then you will get the exchange for one particular date)
 
-- To get the lates exchange
+- To get the latest exchange
 
 ```http
 http://127.0.0.1:5000/currency-exchange/latest/?base=EUR&quote=USD
