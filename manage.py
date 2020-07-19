@@ -15,8 +15,8 @@ manager.add_command('db', MigrateCommand)
 
 
 @manager.command
-def populate(source='API'):
-    populate_initial_data(source)
+def populate(base='EUR', quote='USD', start_date='2020-06-13', end_date='2020-06-18', data_source='API'):
+    populate_initial_data(**locals())
 
 
 @manager.command

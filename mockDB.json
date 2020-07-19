@@ -1,0 +1,110 @@
+[
+    {
+        "quote": "USD",
+        "base": "CLP",
+        "rate": 0.001262,
+        "date": "2020-06-13"
+    },
+    {
+        "quote": "USD",
+        "base": "CLP",
+        "rate": 0.001262,
+        "date": "2020-06-14"
+    },
+    {
+        "quote": "USD",
+        "base": "CLP",
+        "rate": 0.001277,
+        "date": "2020-06-15"
+    },
+    {
+        "quote": "USD",
+        "base": "CLP",
+        "rate": 0.001275,
+        "date": "2020-06-16"
+    },
+    {
+        "quote": "USD",
+        "base": "CLP",
+        "rate": 0.001248,
+        "date": "2020-06-17"
+    },
+    {
+        "quote": "USD",
+        "base": "CLP",
+        "rate": 0.001223,
+        "date": "2020-06-18"
+    },
+    {
+        "quote": "USD",
+        "base": "PEN",
+        "rate": 0.288597,
+        "date": "2020-06-13"
+    },
+    {
+        "quote": "USD",
+        "base": "PEN",
+        "rate": 0.288602,
+        "date": "2020-06-14"
+    },
+    {
+        "quote": "USD",
+        "base": "PEN",
+        "rate": 0.287275,
+        "date": "2020-06-15"
+    },
+    {
+        "quote": "USD",
+        "base": "PEN",
+        "rate": 0.287607,
+        "date": "2020-06-16"
+    },
+    {
+        "quote": "USD",
+        "base": "PEN",
+        "rate": 0.286043,
+        "date": "2020-06-17"
+    },
+    {
+        "quote": "USD",
+        "base": "PEN",
+        "rate": 0.284008,
+        "date": "2020-06-18"
+    },
+    {
+        "quote": "USD",
+        "base": "EUR",
+        "rate": 1.12554,
+        "date": "2020-06-13"
+    },
+    {
+        "quote": "USD",
+        "base": "EUR",
+        "rate": 1.125157,
+        "date": "2020-06-14"
+    },
+    {
+        "quote": "USD",
+        "base": "EUR",
+        "rate": 1.133742,
+        "date": "2020-06-15"
+    },
+    {
+        "quote": "USD",
+        "base": "EUR",
+        "rate": 1.126532,
+        "date": "2020-06-16"
+    },
+    {
+        "quote": "USD",
+        "base": "EUR",
+        "rate": 1.124252,
+        "date": "2020-06-17"
+    },
+    {
+        "quote": "USD",
+        "base": "EUR",
+        "rate": 1.12095,
+        "date": "2020-06-18"
+    }
+]
