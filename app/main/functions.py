@@ -1,10 +1,10 @@
-from .models import db
+from .utils import Utils
 from .models import CurrencyExchangeRates
+from .queries import ExchangeRateQueries
 
 import sys
 import logging
 import requests
-import datetime
 import traceback
 
 
@@ -69,16 +69,11 @@ class PopulateDatabaseFunctions:
     @staticmethod
     def populate(data: list, source='API'):
         if data:
-            try:
-                db.session.add_all((
-                    CurrencyExchangeRates(
-                        base_currency=item.get('quote'),
-                        quote_currency=item.get('base'),
-                        exchange_date=datetime.datetime.strptime(item.get('date'), r'%Y-%m-%d'),
-                        exchange_rate=item.get('rate'),
-                        source=source
-                    ) for item in data))
-                db.session.commit()
-            except Exception:
-                exec_info = sys.exc_info()
-                logging.error(traceback.format_exception(*exec_info))
+            ExchangeRateQueries.bulk_add(
+                (CurrencyExchangeRates(
+                    base_currency=item.get('base'),
+                    quote_currency=item.get('quote'),
+                    exchange_date=Utils.parse_date(item.get('date')),
+                    exchange_rate=item.get('rate'),
+                    source=source
+                ) for item in data))

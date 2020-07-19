@@ -1,7 +1,8 @@
 from app.main.plugins import db
 from flask_script import Manager
-from app.main import populate_initial_data, flask_app
 from flask_migrate import Migrate, MigrateCommand
+from app.main import populate_initial_data, flask_app
+# from app.main.models import CurrencyExchangeRates
 
 
 flask_app.app_context().push()

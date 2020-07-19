@@ -9,7 +9,6 @@ class CurrencyExchangeRatesSerializer(ma.SQLAlchemyAutoSchema):
         fields = ('base_currency',
                   'quote_currency',
                   'exchange_date',
-                  'exchange_rate',
-                  'source')
+                  'exchange_rate')
 
     exchange_date = ma.DateTime(format=r'%Y-%m-%d')
