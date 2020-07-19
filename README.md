@@ -12,6 +12,8 @@ pip install -r requirements.txt
 
 ## Populating data
 
+(Please note that te database uploaded is already populated. If you try to run the command with overlaping dates or currencys it will throw an integrity error)
+
 You have two options to populate the database:
 
 - The first one is to use a json file on the root folder with the following format
