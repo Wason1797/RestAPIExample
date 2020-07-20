@@ -2,6 +2,8 @@
 
 Wellcome to a simple API that makes querys to a local sqlite database to know exchange rates.
 
+This project uses python 3.7.5
+
 ## Install the necessary dependencies
 
 Create a virtual enviroment if necesary or just run the following command:
